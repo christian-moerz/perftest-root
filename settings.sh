@@ -2,7 +2,7 @@
 # Configuration settings
 #
 
-BASEDIR=/root/vms/disklab
+BASEDIR=/vms/disklab
 VMNAME=perftest
 ZVOL=zroot/vols/${VMNAME}
 
@@ -12,7 +12,7 @@ GUEST_IP=192.168.168.2
 GUEST_NET=30
 IFNAME=${VMNAME}0
 
-ISO=/home/lclchristianm/Downloads/FreeBSD-13.2-RELEASE-amd64-disc1.iso
+ISO=/home/user/Downloads/FreeBSD-13.2-RELEASE-amd64-disc1.iso
 CONSOLE=2
 
 MEMORY=2G
@@ -36,13 +36,13 @@ case $HOSTNAME in
     tenforward)
 	CPUPIN=4-7
 	SYSPIN=0-3
-	WORKSPACE=/home/lclchristianm/workspace/perftest
+	WORKSPACE=/home/user/workspace/perftest
 	BHYVEPIN="-p 0:4 -p 1:5 -p 2:6 -p 3:7"
 	;;
     frame14)
 	CPUPIN=0-3
 	SYSPIN=4-7
-	WORKSPACE=/home/lclchristianm/Documents/workspace/perftest
+	WORKSPACE=/home/user/Documents/workspace/perftest
 	BHYVEPIN="-p 0:0 -p 1:1 -p 2:2 -p 3:3"
 	;;
 esac
